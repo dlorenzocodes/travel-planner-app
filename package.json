@@ -1,0 +1,24 @@
+{
+  "name": "travel-planner-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dlorenzocodes/travel-planner-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dlorenzocodes/travel-planner-app/issues"
+  },
+  "homepage": "https://github.com/dlorenzocodes/travel-planner-app#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
