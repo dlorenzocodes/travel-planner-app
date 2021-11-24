@@ -1,0 +1,58 @@
+@import 'resets.scss';
+@import 'variables.scss';
+
+.hero-section{
+    background-color: $light-green;
+    box-shadow: $box-shadow;
+
+    .title-wrapper{
+        padding-top: 2.25rem;
+
+        .title-app{
+            text-align: center;
+            color: $dark-grey;
+
+
+            h1{
+                font-size: 2.25rem;
+                font-weight: $font-bold;
+            }
+
+            h3{
+                font-size: 0.6875rem;
+                font-weight: $font-light;
+                padding-top: 0.5rem;
+            }
+        }
+        .add-icon{
+            width: 2rem;
+            display: none;
+        }
+    }
+
+    .hero-image{
+        width: 50%;
+        margin: 0 auto;
+        display: block;
+        padding-top: 2.9375rem;
+    }
+}
+
+
+// --- Dynamic Classes -----
+
+.title-wrapper.active{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2rem;
+}
+
+.title-wrapper.active .title-app{
+    text-align: left;
+}
+
+.title-wrapper.active .add-icon{
+    display: block;
+}

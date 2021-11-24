@@ -6,8 +6,8 @@ export function loadHeroImages() {
     heroSection.innerHTML = `
         <div class="title-wrapper">
             <div class="title-app">
-                <h1>My Trip</h1>
-                <h3>Wed, Nov 24</h3>
+                <h1>My Trips</h1>
+                <h3>Wednesday, Nov 24</h3>
             </div>
             <img class="add-icon" src=${icon} alt="add trip icon">
         </div>

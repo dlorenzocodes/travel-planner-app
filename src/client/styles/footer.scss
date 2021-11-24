@@ -1,0 +1,20 @@
+@import 'resets.scss';
+@import 'variables.scss';
+
+footer{
+    padding: 2rem 0;
+
+    &::before{
+        content: '';
+        display: block;
+        background-color: $dark-grey;
+        width: 90%;
+        height: 1px;
+        margin: 2rem auto;
+    }
+
+    p{
+        font-size: 0.75rem;
+        text-align: center;
+    }
+}

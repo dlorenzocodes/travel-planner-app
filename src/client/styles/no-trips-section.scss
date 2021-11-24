@@ -1,0 +1,15 @@
+@import 'resets.scss';
+@import 'variables.scss';
+
+.no-trips{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 9.625rem;
+    flex: 1 0 auto;
+    
+    .add-icon{
+        width: 5rem;
+        padding-top: 1.625rem;
+    }
+}
