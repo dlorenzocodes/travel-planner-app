@@ -2,12 +2,12 @@ const path = require('path');
 const express = require('express');
 const app = express();
 
-app.use(express.static('src/client'));
+app.use(express.static('dist'));
 
 
 app.get('/', (req, res) => {
     console.log(__dirname);
-    res.sendFile('/client/view/template.html', {root: __dirname + '/..'})
+    res.sendFile('dist/index.html')
 })
 
 

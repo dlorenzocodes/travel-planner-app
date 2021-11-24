@@ -12,14 +12,8 @@ module.exports = {
                 loader: "babel-loader"
             },
             {
-                test: '/\.(jpe?g|svg|png|gif)$/',
-                use: {
-                    loader: 'file-loader',
-                    options: {
-                        name: '[name].[ext]',
-                        outputPath: 'assets'
-                    }
-                }
+                test: /\.(jpeg|jpg|svg|gif|png)$/,
+                type: 'asset/resource'
             }
         ]
     },
