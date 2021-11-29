@@ -1,0 +1,85 @@
+@import 'resets.scss';
+@import 'variables.scss';
+
+.overlay{
+    height: 100vh;
+    background-color: rgba(120, 120, 120, 29%);
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 300ms ease-in-out;
+
+    &.active{
+        opacity: 1;
+        z-index: 1;
+    }
+}
+
+.modal-form{
+    position: fixed;
+    width: 85%;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: none;
+    background-color: $light-green;
+    color: $dark-grey;
+
+    &.active{
+        display: block;
+        z-index: 2;
+    }
+    
+    form{
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 4rem;
+
+        .buttons{
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8125rem;
+            cursor: pointer;
+            transition: color 300ms ease-in-out;
+            z-index: 999;
+            
+            #cancel:hover,
+            #save:hover{
+                color: $dark-green;
+            }
+        }
+
+        fieldset{
+            display: flex;
+            flex-direction: column;
+            border: none;
+            margin-top: 3rem;
+
+            label{
+                font-size: 1.125rem;
+                font-weight: $font-medium;
+                margin-top: 1.6875rem;
+            }
+
+            input,
+            textarea{
+                border: none;
+                border-bottom: 1px solid $dark-grey;
+                background-color: transparent;
+                margin-top: 1.625rem;
+                outline-color: $dark-green;
+                font-family: $font-family;
+            }
+
+            input{
+                padding: 0.5rem 0;
+            }
+
+            textarea{
+                resize: vertical;
+            }
+        }
+    }
+}

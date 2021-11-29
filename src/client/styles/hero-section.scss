@@ -27,6 +27,12 @@
         .add-icon{
             width: 2rem;
             display: none;
+            cursor: pointer;
+            transition: transform 300ms ease-in-out;
+
+            &:hover{
+                transform: scale(1.2);
+            }
         }
     }
 

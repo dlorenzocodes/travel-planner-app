@@ -9,7 +9,7 @@ export function loadHeroImages() {
                 <h1>My Trips</h1>
                 <h3>Wednesday, Nov 24</h3>
             </div>
-            <img class="add-icon" src=${icon} alt="add trip icon">
+            <img id="no-trip-add-icon" class="add-icon" src=${icon} alt="add trip icon">
         </div>
         <img class="hero-image" src="${img}" alt="girl with suitcase illustration">
     `;

@@ -5,7 +5,7 @@ export function loadAddIcon(){
 
     noTripsSection.innerHTML = `
         <p>You have no trips!</p>
-        <img class="add-icon" src=${icon} alt="add trip icon">
+        <img id="no-trip-add-icon" class="add-icon" src=${icon} alt="add trip icon">
     `;
     return noTripsSection;
 }

@@ -11,6 +11,29 @@
 <body>
     <section class="hero-section"></section>
     <section class="no-trips"></section>
+    <section class="trips-section"></section>
+    <div class="modal-form">
+        <form>
+            <div class="buttons">
+                <a id="cancel">Cancel</a>
+                <a id="save">Save</a>
+            </div>
+
+            <fieldset>
+                <label id="trip-name">Trip Name</label>
+                <input id="trip-name" type="text">
+                <label id="trip-city">Destination City*</label>
+                <input id="trip-city" type="text" required>
+                <label id="trip-start-date">Start Trip Date</label>
+                <input id="trip-start-date" type="date">
+                <label id="trip-end-date">End Trip Date</label>
+                <input id="trip-end-date" type="date">
+                <label id="notes">Trip Notes</label>
+                <textarea id="notes" rows="5" cols="10"></textarea>
+            </fieldset>
+        </form>
+    </div>
+    <div class="overlay"></div>
     <footer></footer>
 </body>
 </html>
