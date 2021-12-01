@@ -5,7 +5,6 @@
     padding: 4.1875rem 2rem 0rem;
     font-size: 0.875rem;
     color: $dark-grey;
-    display: none;
 
     .city-img{
         width: 435px;
@@ -38,7 +37,19 @@
             padding-top: 0.2rem;
 
             #end-date{
-                margin-left: 0.2rem;
+                margin-left: 1.5rem;
+                position: relative;
+                
+                &::before{
+                    content: "";
+                    display: block;
+                    width: 1rem;
+                    height: 1px;
+                    background-color: $dark-grey;
+                    position: absolute;
+                    left: -10%;
+                    top: 50%;
+                }
             }
         }
     }
@@ -82,10 +93,4 @@
             }
         }
     }
-}
-
-// ----- Dynamic Clasess -------
-
-.trips-section.show{
-    display: block;
 }
