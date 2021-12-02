@@ -1,5 +1,6 @@
 import img from '../../images/undraw_departing_re_mlq3.svg';
 import icon from '../../images/add.svg';
+import { displayDate } from './displayDate.js';
 
 export function loadHeroImages() {
     const heroSection = document.querySelector('.hero-section');
@@ -7,7 +8,7 @@ export function loadHeroImages() {
         <div class="title-wrapper">
             <div class="title-app">
                 <h1>My Trips</h1>
-                <h3>Wednesday, Nov 24</h3>
+                <h3>${displayDate()}</h3>
             </div>
             <img id="no-trip-add-icon" class="add-icon" src=${icon} alt="add trip icon">
         </div>

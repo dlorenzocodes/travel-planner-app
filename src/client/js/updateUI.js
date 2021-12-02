@@ -7,32 +7,33 @@ import { daysLeft } from './days-left.js';
 const overlay = document.querySelector('.overlay');
 const form = document.querySelector('.modal-form');
 const noTripsSection= document.querySelector('.no-trips');
-const footer = document.querySelector('footer');
-const parent = document.body;
+
 
 function updateUI(data) {
-    console.log(data);
-    const tripSection = document.createElement('section');
-    tripSection.className = 'trips-section';
-    parent.insertBefore(tripSection, footer);
+    const tripSection = document.querySelector('.trips-section');
+    const titleWrapper = document.querySelector('.title-wrapper');
+    tripSection.style.overflow = 'auto';
 
-    tripSection.innerHTML = `
+    tripSection.innerHTML += `
         <div class="trip-wrapper">
             <div style="background-image: url(${data.img})" class="city-img"></div>
             <div class="trip-info">
                 <h1>${data.name}</h1>
                 <h3>City: ${data.city}</h3>
                 <div class="trip-dates">
-                    <h3 id="start-date">${formatDate(data.startDate)}</h3>
-                    <h3 id="end-date">${formatDate(data.endDate)}<span class="days-left">(${daysLeft(data.startDate, data.endDate)})</span></h3>
+                    <div class="days-for-departure">
+                        <h3 id="start-date">Departure: ${formatDate(data.startDate)}</h3>
+                        <span class="days-left">${daysLeft(data.startDate)}</span>
+                    </div>
+                    <h3 id="end-date">Return: ${formatDate(data.endDate)}</h3>
                 </div>
             </div>
 
             <div class="weather-info">
                 <h3>Typical weather for then is:</h3>
                 <div class="temperature">
-                    <span id="high">High: ${data.temp}</span>
-                    <span id="low">Feels Like: ${data.app_temp || data.app_max_temp}</span>
+                    <span id="high">High: ${data.temp}<span>&#176</span>F</span>
+                    <span id="low">Feels Like: ${data.app_temp || data.app_max_temp}<span>&#176</span>F</span>
                 </div>
             <p>${data.weather_desc}</p>
             </div>
@@ -49,6 +50,7 @@ function updateUI(data) {
     form.classList.remove('active');
     overlay.classList.remove('active');
     noTripsSection.classList.add('hidde');
+    titleWrapper.classList.add('active');
 }
 
 export { updateUI };

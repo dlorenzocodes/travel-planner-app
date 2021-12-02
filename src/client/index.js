@@ -3,6 +3,7 @@ import { loadAddIcon } from '../client/js/noTrips-component.js';
 import { footer } from './js/footer-component.js';
 import { showForm } from './js/showForm.js';
 import { closeForm } from './js/closeForm.js';
+import { createTripSection } from './js/createTripSection';
 import { tripInfoObj} from './js/saveTrip.js';
 
 
@@ -22,5 +23,6 @@ document.body.appendChild(footer());
 // Call modules functions
 showForm();
 closeForm();
+createTripSection();
 tripInfoObj();
 

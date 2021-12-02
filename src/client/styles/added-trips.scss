@@ -6,6 +6,12 @@
     font-size: 0.875rem;
     color: $dark-grey;
 
+    .trip-wrapper{
+        margin-bottom: 2rem;
+        border-bottom: 1px solid black;
+        padding-bottom: 2rem;
+    }
+
     .city-img{
         width: 435px;
         height: 200px;
@@ -32,24 +38,19 @@
         }
 
         .trip-dates{
-            display: flex;
-            flex-direction: row;
             padding-top: 0.2rem;
 
-            #end-date{
-                margin-left: 1.5rem;
-                position: relative;
-                
-                &::before{
-                    content: "";
-                    display: block;
-                    width: 1rem;
-                    height: 1px;
-                    background-color: $dark-grey;
-                    position: absolute;
-                    left: -10%;
-                    top: 50%;
+            .days-for-departure{
+                display: flex;
+                flex-direction: row;
+
+                .days-left{
+                    margin-left: 0.5rem;
                 }
+            }
+
+            #end-date{
+                margin-top: 0.2rem;
             }
         }
     }

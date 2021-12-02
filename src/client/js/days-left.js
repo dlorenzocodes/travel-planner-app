@@ -1,14 +1,14 @@
 
-function daysLeft(departure, returning){
-    if(!departure && !returning){
-        return ''
+function daysLeft(departure){
+    if(!departure){
+        return '';
     } else{
+        const today = new Date();
         const depDate = new Date(departure);
-        const retuDate = new Date(returning);
-        const difference = retuDate.getTime() - depDate.getTime();
+        const difference = depDate.getTime() - today.getTime();
         const daysDiff = Math.round(difference / (1000 * 3600 * 24));
         const s = daysDiff < 2 ? '' : 's';
-        return `${daysDiff}day${s} left`;
+        return `(${daysDiff} day${s} left)`;
     }
 }
 
