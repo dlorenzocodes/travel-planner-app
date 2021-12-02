@@ -5,6 +5,8 @@ import { showForm } from './js/showForm.js';
 import { closeForm } from './js/closeForm.js';
 import { createTripSection } from './js/createTripSection';
 import { tripInfoObj} from './js/saveTrip.js';
+import { deleteTrips } from './js/deleteTrips.js';
+
 
 
 
@@ -25,4 +27,5 @@ showForm();
 closeForm();
 createTripSection();
 tripInfoObj();
+deleteTrips();
 

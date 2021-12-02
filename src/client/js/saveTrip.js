@@ -1,6 +1,8 @@
 import { postTripData } from './app.js';
 import { getData } from './handleForm.js';
 import { updateUI } from './updateUI.js';
+import { deleteTrips } from './deleteTrips.js';
+
 
 // Grabbing Inputs
 const tripName = document.querySelector('input#trip-name');
@@ -24,6 +26,7 @@ const tripInfoObj = () => {
         postTripData(tripData)
             .then(getData)
             .then(updateUI)
+            .then(deleteTrips)
             .catch(err => console.log(err));
     });
 }
