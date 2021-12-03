@@ -1,5 +1,5 @@
 import { postTripData } from './app.js';
-import { getData } from './handleForm.js';
+import { getData } from './getData.js';
 import { updateUI } from './updateUI.js';
 import { deleteTrips } from './deleteTrips.js';
 

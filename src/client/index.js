@@ -1,11 +1,10 @@
-import { loadHeroImages } from '../client/js/heroImg-component.js';
-import { loadAddIcon } from '../client/js/noTrips-component.js';
-import { footer } from './js/footer-component.js';
+import { loadHeroImages } from './js/heroImgComponent.js.js';
+import { loadAddIcon } from './js/noTripsComponent.js';
+import { footer } from './js/footerComponent.js';
 import { showForm } from './js/showForm.js';
 import { closeForm } from './js/closeForm.js';
-import { createTripSection } from './js/createTripSection';
+import { createTripSection } from './js/createTripSection.js';
 import { tripInfoObj} from './js/saveTrip.js';
-import { deleteTrips } from './js/deleteTrips.js';
 
 
 
@@ -27,5 +26,4 @@ showForm();
 closeForm();
 createTripSection();
 tripInfoObj();
-deleteTrips();
 

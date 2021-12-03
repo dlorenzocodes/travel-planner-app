@@ -1,7 +1,7 @@
 
 import icon from '../../images/delete.svg';
 import { formatDate } from './formatDate.js';
-import { daysLeft } from './days-left.js';
+import { daysLeft } from './daysLeftToTrip.js';
 
 
 const overlay = document.querySelector('.overlay');

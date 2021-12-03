@@ -1,6 +1,4 @@
 
-
-
 function createTripSection() {
     const footer = document.querySelector('footer');
     const parent = document.body;
