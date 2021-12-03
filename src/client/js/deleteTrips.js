@@ -1,3 +1,4 @@
+import { checkforTrips } from './checkforTrips.js'
 
 function deleteTrips() {
     const deleteIcon = document.querySelectorAll('.delete');
@@ -11,6 +12,7 @@ function deleteTrips() {
                 if(iIndex === tIndex){
                     const tripToRemove = trips[tIndex];
                     tripToRemove.remove();
+                    checkforTrips();
                 }
             }
         });

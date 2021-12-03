@@ -45,8 +45,8 @@
             transition: color 300ms ease-in-out;
             z-index: 999;
             
-            #cancel:hover,
-            #save:hover{
+            .cancel:hover,
+            .save:hover{
                 color: $dark-green;
             }
         }

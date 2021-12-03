@@ -2,16 +2,13 @@
 import icon from '../../images/delete.svg';
 import { formatDate } from './formatDate.js';
 import { daysLeft } from './daysLeftToTrip.js';
+import { checkforTrips } from './checkforTrips.js';
 
-
-const overlay = document.querySelector('.overlay');
-const form = document.querySelector('.modal-form');
-const noTripsSection= document.querySelector('.no-trips');
 
 
 function updateUI(data) {
+
     const tripSection = document.querySelector('.trips-section');
-    const titleWrapper = document.querySelector('.title-wrapper');
     tripSection.style.overflow = 'auto';
 
     tripSection.innerHTML += `
@@ -47,10 +44,7 @@ function updateUI(data) {
             </div>
         </div>
     `;
-    form.classList.remove('active');
-    overlay.classList.remove('active');
-    noTripsSection.classList.add('hidde');
-    titleWrapper.classList.add('active');
+    checkforTrips();
 }
 
 export { updateUI };
