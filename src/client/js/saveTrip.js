@@ -24,11 +24,17 @@ const tripInfoObj = () => {
             endDate: endDate.value,
             notes: tripNotes.value
         }
+
+        if(tripData.city === '') {
+            alert('A city must be provided! Please enter a city name.')
+            return;
+        }
+
         postTripData(tripData)
             .then(getData)
             .then(updateUI)
             .then(deleteTrips)
-            .catch(err => console.log(err));
+            .catch(err => alert('Something went wrong. Try again', err));
     });
 }
 

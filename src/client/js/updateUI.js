@@ -1,5 +1,6 @@
 
 import icon from '../../images/delete.svg';
+import photo from '../../images/ImageNotFound-01.png';
 import { formatDate } from './formatDate.js';
 import { daysLeft } from './daysLeftToTrip.js';
 import { checkforTrips } from './checkforTrips.js';
@@ -13,7 +14,7 @@ function updateUI(data) {
 
     tripSection.innerHTML += `
         <div class="trip-wrapper">
-            <div style="background-image: url(${data.img})" class="city-img"></div>
+            <div style="background-image: url(${data.img || photo})" class="city-img"></div>
             <div class="trip-info">
                 <h1>${data.name}</h1>
                 <h3>City: ${data.city}</h3>
