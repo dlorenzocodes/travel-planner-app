@@ -1,4 +1,5 @@
 @import 'variables.scss';
+@import 'breakpoints.scss';
 
 *,
 *::before,
@@ -20,6 +21,12 @@ body{
     flex-direction: column;
     position: relative;
     justify-content: space-between;
+
+    @include for-desktop{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 200px;
+    }
 }
 
 a{

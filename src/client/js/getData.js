@@ -12,7 +12,7 @@ async function getData(){
         
         return data;
     }catch(err){
-        alert(err);
+        throw new Error(`Error: ${err}`);
     }
 }
 

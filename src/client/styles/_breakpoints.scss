@@ -1,0 +1,22 @@
+$breakpoint-smallScreen: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+
+
+@mixin for-tablet{
+    @media screen and (min-width: $breakpoint-tablet){
+        @content;
+    }
+}
+
+@mixin for-desktop{
+    @media screen and (min-width: $breakpoint-desktop){
+        @content;
+    }
+}
+
+@mixin for-smallScreen{
+    @media screen and (min-width: $breakpoint-smallScreen){
+        @content;
+    }
+}

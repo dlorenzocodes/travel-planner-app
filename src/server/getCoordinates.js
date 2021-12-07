@@ -10,9 +10,7 @@ const username = process.env.GEONAMES_USERNAME;
 async function getCoordinates(destination){
     try{
         const response = await axios.get(`${geoURl}q=${destination}&maxRows=1&username=${username}`);
-        console.log(response);
         const geoData = response.data.geonames;
-        console.log(geoData.length);
         
         if(geoData.length != 0){
             return{
@@ -29,7 +27,7 @@ async function getCoordinates(destination){
         }
 
     }catch(err){
-        console.log(err);
+        throw new Error(`Error has occured:${err}`);
     }
    
 };

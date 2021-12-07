@@ -27,6 +27,12 @@
     background-color: $light-green;
     color: $dark-grey;
 
+    @include for-tablet{
+        width: 70%;
+        max-width: 610px;
+        min-width: 400px;
+    }
+
     &.active{
         display: block;
         z-index: 2;

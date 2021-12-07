@@ -1,34 +1,72 @@
 @import 'resets.scss';
 @import 'variables.scss';
+@import 'breakpoints.scss';
 
 .trips-section{
     padding: 4.1875rem 2rem 0rem;
     font-size: 0.875rem;
     color: $dark-grey;
 
+    @include for-tablet{
+        padding: 4.1875rem 5rem 0rem;
+    }
+
+    @include for-desktop{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-auto-rows: 1fr;
+        grid-gap: 50px;
+        grid-row: 1/3;
+        grid-column: 2/3;
+    }
+
     .trip-wrapper{
         margin-bottom: 2rem;
         border-bottom: 1px solid black;
         padding-bottom: 2rem;
+
+        @include for-smallScreen{
+            max-width: 400px;
+            margin: 0 auto 2rem;
+        }
     }
 
     .city-img{
-        width: 435px;
-        height: 200px;
+        width: 100%;
+        height: 126px;
         margin: 0 auto;
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: 0 -5rem;
+        background-position: 0 -3rem;
         border-radius: 25px;
         box-shadow: 0px 6px 18px 0px rgb(0 0 0 / 15%);
+
+        @include for-tablet{
+            height: 200px;
+            min-height: 200px;
+        }
+
+        @include for-desktop{
+            background-position: 0 0;
+            height: 160px;
+        }
     }
 
     .trip-info{
         margin-top: 2.5rem;
 
+        @include for-tablet{
+            font-size: 0.8rem;
+        }
+
         h1{
             margin-bottom: 0.4375rem;
             font-size: 1.375rem;
+
+            @include for-tablet{
+                font-size: 1.2rem;
+            }
         }
 
         h3,
@@ -39,6 +77,10 @@
 
         .trip-dates{
             padding-top: 0.2rem;
+
+            @include for-tablet{
+                padding-top: 0.5rem;
+            }
 
             .days-for-departure{
                 display: flex;
@@ -58,14 +100,27 @@
     .weather-info,
     .trip-notes{
         margin-top: 1.1875rem;
+
+        @include for-tablet{
+            margin-top: 2rem;
+            font-size: 0.8rem;
+        }
     }
 
     .weather-info{
         .temperature{
             padding: 0.2rem 0;
 
+            @include for-tablet{
+                padding: 0.5rem 0;
+            }
+
             #low{
                 padding-left: 0.2rem;
+
+                @include for-tablet{
+                    padding-left: 0.5rem;
+                }
             }
         }
     }
@@ -81,6 +136,10 @@
 
             p{
                 padding-top: 0.2rem;
+
+                @include for-tablet{
+                    padding-top: 0.5rem;
+                }
             }
         }
 

@@ -14,7 +14,7 @@ async function getWeather(weatherURl) {
             weather_desc: weatherData.weather.description,
         }
     }catch(err){
-        throw new Error(`Error: ${err}`);
+        throw new Error(`Error has occured:${err}`);
     } 
 };
 

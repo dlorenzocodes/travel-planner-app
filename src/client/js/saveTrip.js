@@ -26,15 +26,16 @@ const tripInfoObj = () => {
         }
 
         if(tripData.city === '') {
-            alert('A city must be provided! Please enter a city name.')
-            return;
+            throw new Error(alert('A city must be provided! Please enter a city name.'));
         }
 
         postTripData(tripData)
             .then(getData)
             .then(updateUI)
             .then(deleteTrips)
-            .catch(err => alert('Something went wrong. Try again', err));
+            .catch(err => {
+                alert(err.message);
+            });
     });
 }
 
