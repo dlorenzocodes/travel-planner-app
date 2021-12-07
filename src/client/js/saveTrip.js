@@ -32,6 +32,13 @@ const tripInfoObj = () => {
         postTripData(tripData)
             .then(getData)
             .then(updateUI)
+            .then( () => {
+                tripName.value = '';
+                tripCity.value = '';
+                startDate.value = '';
+                endDate.value = '';
+                tripNotes.value = '';
+            })
             .then(deleteTrips)
             .catch(err => {
                 alert(err.message);

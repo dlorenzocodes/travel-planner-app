@@ -31,8 +31,8 @@ function updateUI(data) {
                 <div class="weather-info">
                     <h3>Typical weather for then is:</h3>
                     <div class="temperature">
-                        <span id="high">High: ${data.temp}<span>&#176</span>F</span>
-                        <span id="low">Feels Like: ${data.app_temp || data.app_max_temp}<span>&#176</span>F</span>
+                        <span id="high">High: ${Math.round(data.temp)}<span>&#176</span>F</span>
+                        <span id="low">Feels Like: ${Math.round(data.app_temp) || Math.round(data.app_max_temp)}<span>&#176</span>F</span>
                     </div>
                 <p>${data.weather_desc}</p>
                 </div>
