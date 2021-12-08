@@ -1,4 +1,4 @@
-import { postTripData } from './app.js';
+import { postTripData } from './postTripData.js';
 import { getData } from './getData.js';
 import { updateUI } from './updateUI.js';
 import { deleteTrips } from './deleteTrips.js';

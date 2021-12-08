@@ -1,7 +1,5 @@
 const path = require('path');
-const express = require('express');
-const app = express();
-const axios = require('axios');
+const app = require('./app');
 const dotenv = require('dotenv');
 dotenv.config();
 const getCoordinates = require('./getCoordinates');
@@ -9,15 +7,6 @@ const getImage = require('./getImage');
 const getWeather = require('./getWeather');
 const tripDaysPrediction = require('./predictWeather');
 
-app.use(express.json());
-app.use(express.urlencoded({extended: false}));
-app.use(express.static('dist'));
-
-
-app.get('/', (req, res) => {
-    console.log(__dirname);
-    res.sendFile('dist/index.html')
-})
 
 let data = {};
 
