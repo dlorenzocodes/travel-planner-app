@@ -11,6 +11,7 @@ async function postTripData(obj){
             },
             body: JSON.stringify(obj)
         })
+        return response;
     }catch(err){
         alert(`Error: ${err}`)
     }

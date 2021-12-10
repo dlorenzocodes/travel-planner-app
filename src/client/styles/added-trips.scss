@@ -30,6 +30,10 @@
             max-width: 400px;
             margin: 0 auto 2rem;
         }
+
+        @include for-desktop{
+            margin: 0 0 2rem;
+        }
     }
 
     .city-img{

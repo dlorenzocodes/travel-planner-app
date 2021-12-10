@@ -1,5 +1,4 @@
 
-const { response } = require('express');
 // will use supertest to test HTTP requests/responses
 const request = require('supertest');
 const app = require('../src/server/app');

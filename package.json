@@ -38,6 +38,7 @@
     "html-webpack-plugin": "^5.5.0",
     "jest": "^27.4.3",
     "mini-css-extract-plugin": "^2.4.5",
+    "regenerator-runtime": "^0.13.9",
     "sass": "^1.43.4",
     "sass-loader": "^12.3.0",
     "style-loader": "^3.3.1",
