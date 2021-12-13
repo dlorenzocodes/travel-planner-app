@@ -7,6 +7,10 @@ dotenv.config();
 const geoURl = 'http://api.geonames.org/searchJSON?'
 const username = process.env.GEONAMES_USERNAME;
 
+
+// returns coordinates if a vaild destination is entered or
+// retuns an object with error message for bad request
+
 async function getCoordinates(destination){
     try{
         const response = await axios.get(`${geoURl}q=${destination}&maxRows=1&username=${username}`);

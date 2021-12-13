@@ -5,6 +5,8 @@ dotenv.config();
 const pixabayAPI = process.env.PIXABAY_APIKEY;
 const baseURl = 'https://pixabay.com/api/?';
 
+// returns image of destination if found, otherwise returns empty
+
 async function getImage(destination){
    try{
       const image = await axios.get(`${baseURl}key=${pixabayAPI}&q=${destination}&category=places&orientation=horizontal&image_type=photo`);

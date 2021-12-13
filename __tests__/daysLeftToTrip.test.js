@@ -10,8 +10,8 @@ describe('daysLeftToTrip',() => {
     });
 
     it('should return days left if departure day provided', () => {
-        const result = days.daysLeft('2021-12-14');
-        expect(result).toBe('(3 days left)');
+        const result = days.daysLeft('2021-12-16');
+        expect(result).toBe('(2 days left)');
     });
 
     it('should return 0 if departure day has past', () => {

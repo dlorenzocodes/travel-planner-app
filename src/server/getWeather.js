@@ -1,7 +1,8 @@
 const axios = require('axios');
 
 
-
+// returns weather of provided destination.
+// based on trip days left, it takes current weather URl or forcast URl
 async function getWeather(weatherURl) {
     try{
         const weather = await axios.get(weatherURl);
