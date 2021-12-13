@@ -10,7 +10,6 @@ function formatDate(arg){
         const dayZero = day <= 9 ? '0' : '';
         const monthZero = month <= 9 ? '0' : '';
         const newDate = `${monthZero}${month}-${dayZero}${day}-${year}`;
-        console.log(newDate);
         return newDate;
     }
     

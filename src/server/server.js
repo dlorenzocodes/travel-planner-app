@@ -15,8 +15,6 @@ app.post('/newtrip', async (req, res) => {
 
     const weatherAPI = process.env.WEATHERBIT_APIKEY;
     const destination = req.body.city;
-    console.log('Data posted...');
-    console.log(destination);
 
     let weatherURl;
   
@@ -26,7 +24,6 @@ app.post('/newtrip', async (req, res) => {
         
         
         if(!response.code){
-            console.log(response);
             if(!req.body.startDate){
                 weatherURl = `https://api.weatherbit.io/v2.0/current?lat=${response.lat}&lon=${response.lon}&key=${weatherAPI}&units=I`;
             } else{
@@ -43,7 +40,6 @@ app.post('/newtrip', async (req, res) => {
             }
             res.send(data);
         } else{
-            console.log(response);
             data = {...response};
             res.send(data);
         }

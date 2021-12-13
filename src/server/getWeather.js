@@ -6,7 +6,6 @@ async function getWeather(weatherURl) {
     try{
         const weather = await axios.get(weatherURl);
         const weatherData = weather.data.data[0];
-        console.log(`weatherData: ${weatherData}`);
         return {
             temp: weatherData.temp,
             app_temp: weatherData.app_temp,
