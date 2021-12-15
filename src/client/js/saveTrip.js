@@ -1,6 +1,8 @@
 import { postTripData } from './postTripData.js';
 import { getData } from './getData.js';
 import { updateUI } from './updateUI.js';
+import { addToLocalStorage } from './addToLocalStorage.js';
+import { getFromLocalStorage } from './getFromLocalStorage.js';
 import { deleteTrips } from './deleteTrips.js';
 
 
@@ -31,6 +33,8 @@ const tripInfoObj = () => {
 
         postTripData(tripData)
             .then(getData)
+            .then(addToLocalStorage)
+            .then(getFromLocalStorage)
             .then(updateUI)
             .then( () => {
                 tripName.value = '';
@@ -41,7 +45,7 @@ const tripInfoObj = () => {
             })
             .then(deleteTrips)
             .catch(err => {
-                alert(err.message);
+               console.log(err);
             });
     });
 }

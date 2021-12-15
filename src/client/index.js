@@ -5,6 +5,9 @@ import { showForm } from './js/showForm.js';
 import { closeForm } from './js/closeForm.js';
 import { createTripSection } from './js/createTripSection.js';
 import { tripInfoObj} from './js/saveTrip.js';
+import {getFromLocalStorage } from './js/getFromLocalStorage.js';
+import { updateUI } from './js/updateUI.js';
+import { deleteTrips } from './js/deleteTrips.js';
 
 
 
@@ -20,10 +23,15 @@ import './styles/footer.scss';
 document.body.appendChild(loadHeroImages());
 document.body.appendChild(loadAddIcon());
 document.body.appendChild(footer());
+const trips = getFromLocalStorage();
+
 
 // Call modules functions
 showForm();
 closeForm();
 createTripSection();
+updateUI(trips);
+deleteTrips();
 tripInfoObj();
+
 
