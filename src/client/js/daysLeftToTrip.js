@@ -5,14 +5,13 @@ function daysLeft(departure){
     } else{
         const today = new Date();
         const depDate = new Date(departure);
-        const difference = depDate.getTime() - today.getTime();
-        let daysDiff = Math.round(difference / (1000 * 3600 * 24));
-        if(daysDiff < 0){
-            alert('Departure date chosen has already past!');
-            daysDiff = 0;
+        let difference = Math.round((depDate.getTime() - today.getTime()) / 86400000);
+        const s = difference === 1 ? '' : 's';
+        if(difference < 0){
+            difference = Math.abs(difference);
+            return `(${difference} day${s} ago)`;
         }
-        const s = daysDiff < 2 ? '' : 's';
-        return `(${daysDiff} day${s} left)`;
+        return `(${difference} day${s} left)`;
     }
 }
 

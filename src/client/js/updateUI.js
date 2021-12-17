@@ -4,8 +4,8 @@ import photo from '../../images/ImageNotFound-01.png';
 import { formatDate } from './formatDate.js';
 import { daysLeft } from './daysLeftToTrip.js';
 import { checkforTrips } from './checkforTrips.js';
-
-
+import { orderTripsChronologically } from './orderTrips.js'
+import { addTooltip } from './addTooltip.js';
 
 
 function updateUI(data) {
@@ -18,7 +18,7 @@ function updateUI(data) {
 
         data.forEach( trip => {
             tripSection.innerHTML += `
-                <div class="trip-wrapper" id="${idCount++}">
+                <div class="trip-wrapper" id="${idCount++}" data-id="${new Date(trip.startDate).getTime()}">
                     <div style="background-image: url(${trip.img || photo})" class="city-img"></div>
                     <div class="trip-info">
                         <h1>${trip.name}</h1>
@@ -27,6 +27,9 @@ function updateUI(data) {
                             <div class="days-for-departure">
                                 <h3 id="start-date">Departure: ${formatDate(trip.startDate)}</h3>
                                 <span class="days-left">${daysLeft(trip.startDate)}</span>
+                                <div class="tooltip">
+                                    <span class="tooltiptext">Trip expired</span>
+                                </div>
                             </div>
                             <h3 id="end-date">Return: ${formatDate(trip.endDate)}</h3>
                         </div>
@@ -51,9 +54,10 @@ function updateUI(data) {
                 </div>
             `;
         });
-
+        
+        addTooltip();
+        orderTripsChronologically();
         checkforTrips();
-
     }else{
         return;
     }

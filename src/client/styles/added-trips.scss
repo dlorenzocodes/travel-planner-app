@@ -81,6 +81,7 @@
 
         .trip-dates{
             padding-top: 0.2rem;
+            font-size: 0.7rem;
 
             @include for-tablet{
                 padding-top: 0.5rem;
@@ -89,9 +90,49 @@
             .days-for-departure{
                 display: flex;
                 flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
 
                 .days-left{
                     margin-left: 0.5rem;
+                    position: relative;
+                }
+
+                .tooltip{
+                    position: relative;
+                    width: 25%;
+                    display: none;
+                    justify-content: center;
+                    background-color: $dark-grey;
+                    padding: 0.2rem;
+                    border-radius: 5px;
+                    transition: visibility 300ms ease-in-out;
+
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        width: 10px;
+                        height: 10px;
+                        left: -3px;
+                        background-color: #2F2E41;
+                        transform: rotateZ(45deg);
+                        
+                        @include for-tablet{
+                            width: 10px;
+                            height: 10px;
+                            left: -2px;
+                        }
+
+                        @include for-desktop{
+                            top: 25%;
+                            z-index: -1;
+                        }
+                    }
+
+                    .tooltiptext{
+                        font-size: 0.5rem;
+                        color: white;
+                    }
                 }
             }
 
@@ -157,4 +198,10 @@
             }
         }
     }
+}
+
+// Dynamic Classes
+
+.trip-wrapper.show .days-left{
+    color: #E34B45;
 }
