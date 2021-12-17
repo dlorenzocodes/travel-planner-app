@@ -6,7 +6,6 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const WorkboxPlugin = require('workbox-webpack-plugin');
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
-const { extendDefaultPlugins } = require("svgo");
 
 
 
