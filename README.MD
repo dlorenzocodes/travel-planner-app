@@ -1,12 +1,13 @@
 # Project Title
 
-Udacity Capstone Project - Travel App
+Udacity Capstone Project - Travel Planner App
 
 # Description
 
 This travel app allows to add planned trips. It shows and gives weather of the destination.
-Also, it allows to enter departure and return dates. It countdowns how many days left for the trip,
-and allows space for notes if so desired.
+Also, it allows to enter departure and return dates. It countdowns how many days left for the trip,and allows space for notes if so desired.
+
+Trips are ordered form lowest to highest, and marked expired trips are added last.
 
 The app uses three APIs, Geonames, Weatherbit and Pixabay. 
 
@@ -31,7 +32,7 @@ The app uses three APIs, Geonames, Weatherbit and Pixabay.
 
 # Usage
 
-App is free for personal use
+App is free for personal use.
 
 # Credits
 
