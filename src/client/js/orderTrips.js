@@ -22,13 +22,11 @@ function orderTripsChronologically(){
     }
 
     dates.sort((a,b) => a - b);
-    console.log(dates);
     const nodeTripsToArr = Array.from(allTrips);
     dates.forEach( d => {
         const soonerTrips = nodeTripsToArr.filter((trip) => trip.getAttribute('data-id') == d);
         newTripsArr.push(...soonerTrips);
     });
-    console.log(newTripsArr);
 
     for(let j = 0; j < newTripsArr.length; j++){
 

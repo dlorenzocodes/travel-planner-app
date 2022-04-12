@@ -50,7 +50,6 @@ app.post('/newtrip', async (req, res) => {
 });
 
 app.get('/getData', (req,res) => {
-    console.log('Getting data...');
     res.send(data);
 });
 

@@ -2,6 +2,8 @@
 
 Udacity Capstone Project - Travel Planner App
 
+![Travel Planner Mock up-02](https://user-images.githubusercontent.com/80544619/162973401-423614fe-4564-40aa-878d-6b284d4e260f.png)
+
 # Description
 
 This travel app allows to add planned trips. It shows and gives weather of the destination.
@@ -18,6 +20,11 @@ The app uses three APIs, Geonames, Weatherbit and Pixabay.
 3. Use ```npm install``` to install all dependencies 
 4. Use ```npm run build-prod``` to create dist folder 
 5. Start server by running ```npm start```
+
+## Configure your local environment
+    GEONAMES_USERNAME=
+    WEATHERBIT_APIKEY=
+    PIXABAY_APIKEY=
 
 # Technologies
 
